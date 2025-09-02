@@ -1,0 +1,12 @@
+// Array of background colours
+const colors = ["#f4f4f4", "#ffeaa7", "#fab1a0", "#a29bfe", "#55efc4", "#81ecec", "#ff7675"];
+
+// Function to change background randomly
+function changeBackground() {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.transition = "background-color 1s ease"; // CSS transition via JS
+  document.body.style.backgroundColor = randomColor;
+}
+
+// Run on button click
+document.getElementById("bgBtn").addEventListener("click", changeBackground);
